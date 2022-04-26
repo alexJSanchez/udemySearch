@@ -15,12 +15,13 @@ class App extends React.Component{
                 q: term
             }
         })
-        console.log(this.setState({videos: response.data.items}))
+        this.setState({videos: response.data.items})
     };
     render(){
         return (
         <div className="ui container">
             <SearchBar onFormSubmit={this.onTermSubmit}/>
+            i have {this.state.videos.length} videos
         </div>
         )
     }
